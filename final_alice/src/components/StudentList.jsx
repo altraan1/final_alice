@@ -6,6 +6,7 @@ const StudentList = ({ students }) => {
     const names = sortedStudents.map(student => student.name);
     const status = sortedStudents.map(student => student.marks >= 50 ? 'Pass' : 'Fail');
     const grade = sortedStudents.map(student => student.marks);
+    const statusFailed = StudentList.status === 'Fail' ? '#FF0000' : '#00FF00'; 
 
     return (
         <div className="student-list">
@@ -25,7 +26,8 @@ const StudentList = ({ students }) => {
                             <td>{names[index]}</td>
                             <td>{marks[index]}</td>
                             <td>{grade[index]}</td>
-                            <td>{status[index]}</td>
+                            <td>{statusFailed[index]}
+                            </td>
                         </tr>
                     ))}
                 </tbody>
