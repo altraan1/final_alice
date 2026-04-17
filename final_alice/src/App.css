@@ -182,3 +182,84 @@
     border-right-color: var(--border);
   }
 }
+
+.statistic {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  .number {
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--text-h);
+    @media (max-width: 1024px) {
+      font-size: 24px;
+    }
+  }
+
+  .label {
+    font-size: 14px;
+    color: var(--text);
+    @media (max-width: 1024px) {
+      font-size: 12px;
+    }
+  }
+}
+.error {
+  color: var(--error);
+  font-size: 14px;
+  margin-top: 8px;
+  @media (max-width: 1024px) {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+}
+
+.status{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text);
+  @media (max-width: 1024px) {
+    font-size: 12px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--status-ok);
+    &.error {
+      background-color: var(--status-error);
+    }
+  }
+}
+
+.grade {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text);
+  @media (max-width: 1024px) {
+    font-size: 12px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--grade-ok);
+    &.error {
+      background-color: var(--grade-error);
+    }
+  }
+}
+.studentList.status == 'Failed' .indicator {
+  color: #FF0000;
+}
+.studentList.status == 'Passed' .indicator {
+  color: #00FF00;
+}
