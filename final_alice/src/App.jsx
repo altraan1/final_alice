@@ -17,27 +17,23 @@ useEffect(() => {
     .catch(error => console.error('Error fetching student data:', error));
 }, []);
 
-const [students, setStudents] = useState([]);
-const [loading, setLoading] = useState(true);
-const [error, setError] = useState(null);
+const [student, setStudent] = useState([null]);
+const [statisticsData, setStatisticsData] = useState({});
+const [studentListData, setStudentListData] = useState([null]);
 
 useEffect(() => {
   fetch('data.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      setStudents(data);
-      setLoading(false);
-    })
-    .catch(error => {
-      setError(error);
-      setLoading(false);
-    });
-}, []);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    setStudent(data);
+    setStatisticsData(data);
+    setStudentListData(data);
+  })
+  .catch(error => console.error('Error fetching student data:', error));
 
 if (loading) {
   return <div>Loading...</div>;
