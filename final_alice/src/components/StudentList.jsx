@@ -1,6 +1,6 @@
 import React from 'react'
 
-const StudentList = ({ students }) => {
+const StudentList = ({ studentListData }) => {
     const sortedStudents = students.sort();
     const marks = sortedStudents.map(student => student.marks, 80-100 ? 'A' : student.marks >= 60 ? 'B' : student.marks >= 50 ? 'C' : 'F');
     const names = sortedStudents.map(student => student.name);

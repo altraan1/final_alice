@@ -20,9 +20,13 @@ useEffect(() => {
 const [student, setStudent] = useState([null]);
 const [statisticsData, setStatisticsData] = useState({});
 const [studentListData, setStudentListData] = useState([null]);
+const data = await fetch('data.json'); 
+  if (!data.ok) throw new Error('Network response was not ok');
 
+  const list = studentListData.map(student => student.name);
+  
 useEffect(() => {
-  fetch('data.json')
+  fetch(data)
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Statistics = ({ students }) => {
+const Statistics = ({ statisticsData }) => {
   const totalStudents = students.length;
   const averageMarks =
     students.reduce((acc, student) => acc + student.marks, 0) / totalStudents;
