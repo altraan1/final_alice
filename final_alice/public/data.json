@@ -1,0 +1,19 @@
+[
+  { "id": 1, "name": "Tim", "marks": 85 },
+  { "id": 2, "name": "Bob", "marks": 45 },
+  { "id": 3, "name": "Carol", "marks": 72 },
+    { "id": 4, "name": "David", "marks": 60 },
+    { "id": 5, "name": "Eve", "marks": 90 },
+    { "id": 6, "name": "Frank", "marks": 55 },
+    { "id": 7, "name": "Grace", "marks": 80 },
+    { "id": 8, "name": "Hank", "marks": 40 },
+    { "id": 9, "name": "Ivy", "marks": 95 },
+    { "id": 10, "name": "Jack", "marks": 70 },
+    { "id": 11, "name": "Karen", "marks": 88 },
+    { "id": 12, "name": "Leo", "marks": 65 },
+    { "id": 13, "name": "Mia", "marks": 92 },
+    { "id": 14, "name": "Nina", "marks": 78 },
+    { "id": 15, "name": "Oscar", "marks": 40 },
+    { "id": 16, "name": "Reem", "marks": 82 }
+  
+]
